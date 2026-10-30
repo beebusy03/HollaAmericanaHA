@@ -32,7 +32,7 @@ function FaqSection() {
   }
 
   return (
-    <section className="faq-section" aria-labelledby="faq-title">
+    <section className="faq-section" id="faq" aria-labelledby="faq-title">
       <header className="faq-section__header">
         <h2 id="faq-title">Frequently Asked Questions</h2>
         <p>

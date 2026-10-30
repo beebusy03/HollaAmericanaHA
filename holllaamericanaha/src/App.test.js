@@ -68,6 +68,12 @@ test('renders the South America hero and navigation', () => {
   expect(
     screen.getByRole('button', { name: /which countries do you cover/i })
   ).toHaveAttribute('aria-expanded', 'false');
+  expect(
+    screen.getByRole('heading', { name: /ready to get started/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('navigation', { name: /footer navigation/i })
+  ).toBeInTheDocument();
 });
 
 test('toggles the navigation menu', () => {

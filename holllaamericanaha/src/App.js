@@ -7,6 +7,7 @@ import SidekicksSection from './components/SidekicksSection';
 import GlobalPresenceSection from './components/GlobalPresenceSection';
 import BookingSection from './components/BookingSection';
 import FaqSection from './components/FaqSection';
+import SiteFooter from './components/SiteFooter';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <GlobalPresenceSection />
       <BookingSection />
       <FaqSection />
+      <SiteFooter />
     </>
   );
 }

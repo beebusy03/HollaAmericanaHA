@@ -29,7 +29,7 @@ const expertiseStories = [
 
 function ExpertiseSection() {
   return (
-    <section className="expertise-section" aria-labelledby="expertise-title">
+    <section className="expertise-section" id="about-us" aria-labelledby="expertise-title">
       <header className="expertise-section__header">
         <p className="expertise-section__eyebrow" aria-hidden="true">
           BEHIND EVERY JOURNEY

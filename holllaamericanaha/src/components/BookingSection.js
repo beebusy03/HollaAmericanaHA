@@ -4,6 +4,7 @@ function BookingSection() {
   return (
     <section
       className="booking-section"
+      id="contact"
       aria-labelledby="booking-title"
       style={{ '--booking-image': "url('/images/7thScreen.jpg')" }}
     >
