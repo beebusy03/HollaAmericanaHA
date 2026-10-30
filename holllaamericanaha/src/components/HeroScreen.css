@@ -1,0 +1,300 @@
+@font-face {
+  font-family: 'Brittany Signature';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.cdnfonts.com/s/39082/BrittanySignature-LjyZ.woff') format('woff');
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: max(841px, 100vh);
+  min-height: 100svh;
+  min-height: max(841px, 100svh);
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  background-color: #26342c;
+  background-image:
+    linear-gradient(180deg, rgb(15 22 22 / 48%) 0%, rgb(13 23 19 / 45%) 48%, rgb(9 17 13 / 62%) 100%),
+    var(--hero-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  display: grid;
+  width: min(1170px, calc(100% - 64px));
+  height: 110px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.site-logo {
+  justify-self: start;
+  color: inherit;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.site-nav a {
+  color: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  opacity: 0.72;
+}
+
+.menu-toggle {
+  display: flex;
+  width: 28px;
+  height: 24px;
+  flex-direction: column;
+  justify-self: end;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 1px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.menu-toggle--open span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle--open span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.hero-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 200px 135px;
+  text-align: center;
+}
+
+.hero-title {
+  position: relative;
+  display: flex;
+  width: min(600px, calc(100vw - 32px));
+  height: 260px;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.hero-title__experience {
+  font-family: 'Sora', sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 75.54px;
+  white-space: nowrap;
+  margin-bottom: -10px;
+}
+
+.hero-title__tagline {
+  font-family: 'Sora', sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 75.54px;
+  white-space: nowrap;
+}
+
+.hero-title__script {
+  width: max-content;
+  font-family: 'Brittany Signature', cursive;
+  font-style: normal;
+  font-size: 88px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 75.54px;
+  transform: translateY(24px);
+  white-space: nowrap;
+  margin-Bottom: 18px
+  ;
+}
+
+.booking-link {
+  display: inline-flex;
+  width: 255px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0;
+  padding: 18px 30px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 100px;
+  background: rgb(255 255 255 / 21%);
+  color: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.booking-link:hover,
+.booking-link:focus-visible {
+  background: rgb(255 255 255 / 27%);
+  transform: translateY(-2px);
+}
+
+.site-nav a:focus-visible,
+.menu-toggle:focus-visible,
+.booking-link:focus-visible,
+.site-logo:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    width: calc(100% - 40px);
+    height: 106px;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    padding-top: 32px;
+  }
+
+  .site-logo {
+    font-size: 26px;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 73px;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px;
+    border: 1px solid rgb(255 255 255 / 17%);
+    border-radius: 14px;
+    background: rgb(19 29 24 / 88%);
+    backdrop-filter: blur(14px);
+  }
+
+  .site-nav--open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 15px 0;
+    font-size: 15px;
+  }
+
+  .site-nav a + a {
+    border-top: 1px solid rgb(255 255 255 / 14%);
+  }
+
+  .hero-content {
+    gap: 24px;
+    padding: 140px 24px 80px;
+  }
+
+  .hero-title__experience {
+    font-size: clamp(38px, 10.3vw, 62px);
+    letter-spacing: -1.7px;
+    line-height: 1.05;
+  }
+
+  .hero-title__tagline {
+    font-size: clamp(38px, 10.3vw, 62px);
+    letter-spacing: -1.7px;
+    line-height: 1.05;
+  }
+
+  .hero-title {
+    height: auto;
+    gap: 10px;
+  }
+
+  .hero-title__script {
+    max-width: 100%;
+    font-size: clamp(44px, 12vw, 88px);
+    letter-spacing: -2px;
+    line-height: 1;
+    transform: translateY(clamp(10px, 2vw, 18px));
+  }
+
+  .booking-link {
+    width: min(255px, calc(100vw - 32px));
+    height: 56px;
+    padding: 18px 30px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 760px) and (max-height: 840px) {
+    .hero {
+      min-height: 100svh;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title__experience {
+    font-size: clamp(32px, 9vw, 38px);
+    letter-spacing: -1.4px;
+  }
+
+  .hero-title__tagline {
+    font-size: clamp(32px, 9vw, 38px);
+    letter-spacing: -1.4px;
+  }
+
+  .hero-title__script {
+    font-size: clamp(40px, 13vw, 54px);
+  }
+}
