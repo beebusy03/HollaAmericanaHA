@@ -49,6 +49,14 @@ test('renders the South America hero and navigation', () => {
       name: /classic red jeep traveling through the green hills of colombia/i,
     })
   ).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /a trusted indian company/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('img', {
+      name: /world map showing our roots in india and travel focus in south america/i,
+    })
+  ).toBeInTheDocument();
 });
 
 test('toggles the navigation menu', () => {
