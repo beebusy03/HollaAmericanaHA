@@ -5,6 +5,8 @@ import FeaturedDestinations from './components/FeaturedDestinations';
 import ExpertiseSection from './components/ExpertiseSection';
 import SidekicksSection from './components/SidekicksSection';
 import GlobalPresenceSection from './components/GlobalPresenceSection';
+import BookingSection from './components/BookingSection';
+import FaqSection from './components/FaqSection';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <ExpertiseSection />
       <SidekicksSection />
       <GlobalPresenceSection />
+      <BookingSection />
+      <FaqSection />
     </>
   );
 }

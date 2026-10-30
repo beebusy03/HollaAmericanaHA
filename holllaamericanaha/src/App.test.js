@@ -57,6 +57,17 @@ test('renders the South America hero and navigation', () => {
       name: /world map showing our roots in india and travel focus in south america/i,
     })
   ).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /book your holiday today/i })
+  ).toBeInTheDocument();
+  expect(screen.getByLabelText(/name of company/i)).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /frequently asked questions/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('button', { name: /which countries do you cover/i })
+  ).toHaveAttribute('aria-expanded', 'false');
 });
 
 test('toggles the navigation menu', () => {
@@ -70,4 +81,18 @@ test('toggles the navigation menu', () => {
     'aria-expanded',
     'true'
   );
+});
+
+test('opens an FAQ answer when its question is selected', () => {
+  render(<App />);
+
+  const question = screen.getByRole('button', {
+    name: /which countries do you cover/i,
+  });
+  fireEvent.click(question);
+
+  expect(question).toHaveAttribute('aria-expanded', 'true');
+  expect(
+    screen.getByText(/we create journeys across south america/i)
+  ).toBeInTheDocument();
 });
