@@ -33,6 +33,11 @@ test('renders the South America hero and navigation', () => {
       'article'
     )
   ).toHaveLength(6);
+  expect(
+    screen.getByRole('heading', { name: /real people, real expertise/i })
+  ).toBeInTheDocument();
+  expect(screen.getByText('BEHIND EVERY JOURNEY')).toBeInTheDocument();
+  expect(screen.getByText('Local Guides & Indian Partners')).toBeInTheDocument();
 });
 
 test('toggles the navigation menu', () => {
