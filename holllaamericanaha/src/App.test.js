@@ -14,6 +14,17 @@ test('renders the South America hero and navigation', () => {
   expect(
     screen.getByRole('navigation', { name: /main navigation/i })
   ).toBeInTheDocument();
+  expect(
+    screen.getByText(
+      'Exceptional journeys begin with a single choice, choosing the right partner.'
+    )
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /our destinations/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('button', { name: /next destinations/i })
+  ).toBeInTheDocument();
 });
 
 test('toggles the navigation menu', () => {
