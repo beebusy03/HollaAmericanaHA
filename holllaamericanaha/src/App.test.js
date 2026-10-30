@@ -38,6 +38,17 @@ test('renders the South America hero and navigation', () => {
   ).toBeInTheDocument();
   expect(screen.getByText('BEHIND EVERY JOURNEY')).toBeInTheDocument();
   expect(screen.getByText('Local Guides & Indian Partners')).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /our sidekicks/i })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByText(/personalized airport transfers and seamless arrival assistance/i)
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('img', {
+      name: /classic red jeep traveling through the green hills of colombia/i,
+    })
+  ).toBeInTheDocument();
 });
 
 test('toggles the navigation menu', () => {
